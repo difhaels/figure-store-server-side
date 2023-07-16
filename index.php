@@ -1,3 +1,8 @@
+<?php
+require('functions.php');
+$daftars = tampil("SELECT * FROM daftar");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
