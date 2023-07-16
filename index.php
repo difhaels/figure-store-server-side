@@ -15,14 +15,16 @@ $daftars = tampil("SELECT * FROM daftar");
 <body class="p-5 bg-[#54efc3]">
     <h1 class="tittle">Kasir App - Admin Side</h1>
     <div class="flex flex-wrap gap-5">
-        <div class="daftar">
-            <h1 class="daftar-nama">Mie Ayam bawang</h1>
-            <img src="./daftar/mieayambawang.jpg" alt="mieayam" class="daftar-gambar">
-            <div class="daftar-keterangan-1">
-                <h1 class="daftar-keterangan-1-1">Rp.10000</h1>
-                <h1 class="daftar-keterangan-1-1">Stock : 50</h1>
+        <?php foreach ($daftars as $daftar) : ?>
+            <div class="daftar">
+                <h1 class="daftar-nama"><?= $daftar["nama"] ?></h1>
+                <img src="./daftar/<?= $daftar["gambar"] ?>.jpg" alt="<?= $daftar["nama"] ?>" class="daftar-gambar">
+                <div class="daftar-keterangan-1">
+                    <h1 class="daftar-keterangan-1-1"><?= $daftar["harga"] ?></h1>
+                    <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stok"] ?></h1>
+                </div>
             </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 </body>
 
