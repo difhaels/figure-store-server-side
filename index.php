@@ -3,10 +3,11 @@
 
 <head>
     <title>Kasir App</title>
+    <link rel="stylesheet" href="css/output.css">
 </head>
 
 <body>
-    <img src="./daftar/chacha.jpg" alt="">
+    <h2 class="">Kasir App - Admin Side</h2>
 </body>
 
 </html>
