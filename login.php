@@ -2,7 +2,7 @@
 session_start();
 require 'functions.php';
 
-// set cookie
+// set cookie | cek ada cookie atau tidak
 if (isset($_COOKIE['key'])) {
     $_SESSION['login'] = true;
 }
@@ -36,7 +36,8 @@ if (isset($_POST["login"])) {
 
             // cek remember me di centang tidak
             if (isset($_POST['remember'])) {
-                setcookie('key', $row['username'], time() + 360);
+                // memberi waktu 3600 detik jika di centang
+                setcookie('key', $row['username'], time() + 3600);
             }
 
             // pindah ke halaman index
