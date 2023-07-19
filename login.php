@@ -1,13 +1,17 @@
 <?php
 session_start();
+require 'functions.php';
+
+// set cookie
+if (isset($_COOKIE['key'])) {
+    $_SESSION['login'] = true;
+}
 
 // jika login true pindah ke halaman index.html
 if (isset($_SESSION["login"])) {
     header("Location: index.php");
     exit;
 }
-
-require 'functions.php';
 
 // jika login ditekan
 if (isset($_POST["login"])) {
@@ -29,6 +33,13 @@ if (isset($_POST["login"])) {
         if ($password == $row["password"]) {
             // set session
             $_SESSION["login"] = true;
+
+            // cek remember me di centang tidak
+            if (isset($_POST['remember'])) {
+                setcookie('key', $row['username'], time() + 360);
+            }
+
+            // pindah ke halaman index
             header("Location: index.php");
             exit;
         } else {
@@ -59,6 +70,8 @@ if (isset($_POST["login"])) {
     <form action="" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Remember me</label>
         <button type="submit" name="login" class="bg-white text-teal-500 hover:text-teal-300">Login</button>
     </form>
 </body>

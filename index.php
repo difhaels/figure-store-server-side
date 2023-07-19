@@ -12,6 +12,7 @@ require('functions.php');
 
 // menampilkan daftar
 $daftars = tampil("SELECT * FROM daftar");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
