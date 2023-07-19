@@ -24,6 +24,7 @@ $daftars = tampil("SELECT * FROM daftar");
 
 <body class="p-5 bg-[#54efc3] mx-10">
     <h1 class="tittle mb-5">Kasir App - Admin Side</h1>
+    <a href="logout.php">Logout</a>
     <div class="flex flex-wrap gap-2">
 
         <?php foreach ($daftars as $daftar) : ?>
