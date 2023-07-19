@@ -1,20 +1,30 @@
 <?php
+// memulai session agar bisa menggunakan $_SESSION
+session_start();
+
+// cek user udah login belum? jika belum akan pindah ke halaman login
+if (!isset($_SESSION["login"])) {
+    header("Location: login.php");
+    exit;
+}
+
 require('functions.php');
+
+// menampilkan daftar
 $daftars = tampil("SELECT * FROM daftar");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Kasir App</title>
     <link rel="stylesheet" href="./css/output.css">
-    <!-- <meta http-equiv="refresh" content="5"> -->
 </head>
 
-<body class="p-5 bg-[#54efc3]">
-    <h1 class="tittle">Kasir App - Admin Side</h1>
-    <div class="flex flex-wrap gap-5">
+<body class="p-5 bg-[#54efc3] mx-10">
+    <h1 class="tittle mb-5">Kasir App - Admin Side</h1>
+    <div class="flex flex-wrap gap-2">
+
         <?php foreach ($daftars as $daftar) : ?>
             <div class="daftar">
                 <h1 class="daftar-nama"><?= $daftar["nama"] ?></h1>
@@ -25,7 +35,9 @@ $daftars = tampil("SELECT * FROM daftar");
                 </div>
             </div>
         <?php endforeach; ?>
+
     </div>
+
 </body>
 
 </html>

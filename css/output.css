@@ -534,6 +534,19 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .flex {
   display: flex;
 }
@@ -542,8 +555,16 @@ video {
   flex-wrap: wrap;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .bg-\[\#54efc3\] {
@@ -556,7 +577,6 @@ video {
 }
 
 .tittle {
-  margin-bottom: 2.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -576,6 +596,7 @@ video {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 700;
@@ -594,6 +615,7 @@ video {
   justify-content: space-between;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  padding-top: 0.75rem;
   padding-bottom: 1.25rem;
 }
 

@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 .tittle {
-    @apply font-bold text-xl mb-10;
+    @apply font-bold text-xl;
 }
 .daftar {
     @apply bg-white w-56 shadow-xl rounded-sm;
 }
 .daftar-nama {
-    @apply px-5 pt-5 font-bold text-base;
+    @apply px-5 pt-5 pb-3 font-bold text-base;
 }
 .daftar-gambar {
     @apply w-40 h-40 mx-auto;
 }
 .daftar-keterangan-1 {
-    @apply flex justify-between items-center px-5 pb-5;
+    @apply flex justify-between items-center pt-3 px-5 pb-5;
 }
 .daftar-keterangan-1-1 {
     @apply text-sm text-teal-500;
