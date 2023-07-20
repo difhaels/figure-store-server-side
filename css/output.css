@@ -539,10 +539,6 @@ video {
   margin-right: 2.5rem;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -553,14 +549,6 @@ video {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .gap-2 {
