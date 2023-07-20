@@ -35,8 +35,8 @@ $daftars = tampil("SELECT * FROM daftar");
                     <h1 class="daftar-keterangan-1-1"><?= $daftar["harga"] ?></h1>
                     <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stok"] ?></h1>
                 </div>
-                <div>
-                    <h1>Edit</h1>
+                <div class="px-5 flex justify-center items-center gap-5">
+                    <a>Edit</a>
                     <a href="">
                         <img src="./img/icon/delete.png" alt="delete" width="25">
                     </a>

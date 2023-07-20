@@ -551,8 +551,20 @@ video {
   flex-wrap: wrap;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .bg-\[\#54efc3\] {
@@ -562,6 +574,11 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .tittle {
