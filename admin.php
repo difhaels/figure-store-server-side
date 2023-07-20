@@ -22,6 +22,7 @@ if (isset($_POST["daftar"])) {
 
 // membaca table admin
 $admins = tampil("SELECT * FROM admin");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,14 +41,14 @@ $admins = tampil("SELECT * FROM admin");
         <form action="" method="post">
             <input type="text" name="username" placeholder="masukan username">
             <input type="password" name="password" placeholder="masukan password">
-            <input type="submit" name="daftar" placeholder="daftar">
+            <button type="submit" name="daftar">tambah</button>
         </form>
     </div>
     <div>
         <h1>Daftar Admin</h1>
         <?php foreach ($admins as $admin) : ?>
             <ul>
-                <li><?= $admin['username'] ?></li>
+                <li><?= $admin['username'] ?> <a href="hapus.php?id=<?= $admin['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">hapus</a></li>
             </ul>
         <?php endforeach; ?>
     </div>
