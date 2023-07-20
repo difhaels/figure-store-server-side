@@ -23,6 +23,12 @@ $daftars = tampil("SELECT * FROM daftar");
 </head>
 
 <body class="p-5 bg-[#54efc3] mx-10">
+    <div>
+        <a href="">Pembayaran</a>
+        <a href="">Tambah Daftar</a>
+        <a href="admin.php">Admin</a>
+        <a href="">Register Member</a>
+    </div>
     <h1 class="tittle mb-5">Kasir App - Admin Side</h1>
     <a href="logout.php">Logout</a>
     <div class="flex flex-wrap gap-2">
