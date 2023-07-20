@@ -43,7 +43,7 @@ $daftars = tampil("SELECT * FROM daftar");
                 </div>
                 <div class="px-5 flex justify-center items-center gap-5">
                     <a>Edit</a>
-                    <a href="">
+                    <a href="hapusDaftar.php?id=<?= $daftar['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">
                         <img src="./img/icon/delete.png" alt="delete" width="25">
                     </a>
                 </div>

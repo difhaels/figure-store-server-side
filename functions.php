@@ -28,10 +28,18 @@ function tambahAdmin($data)
     return mysqli_affected_rows($koneksi);
 }
 
-// fungsi untuk menghapus data / Delete
-function hapus($id)
+// fungsi untuk menghapus data / Delete admin
+function hapusAdmin($id)
 {
     global $koneksi;
     mysqli_query($koneksi, "DELETE FROM admin WHERE id = $id");
+    return mysqli_affected_rows($koneksi);
+}
+
+// fungsi untuk menghapus data / Delete admin
+function hapusDaftar($id)
+{
+    global $koneksi;
+    mysqli_query($koneksi, "DELETE FROM daftar WHERE id = $id");
     return mysqli_affected_rows($koneksi);
 }

@@ -48,7 +48,7 @@ $admins = tampil("SELECT * FROM admin");
         <h1>Daftar Admin</h1>
         <?php foreach ($admins as $admin) : ?>
             <ul>
-                <li><?= $admin['username'] ?> <a href="hapus.php?id=<?= $admin['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">hapus</a></li>
+                <li><?= $admin['username'] ?> <a href="hapusAdmin.php?id=<?= $admin['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">hapus</a></li>
             </ul>
         <?php endforeach; ?>
     </div>
