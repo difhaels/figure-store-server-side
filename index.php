@@ -36,7 +36,7 @@ $daftars = tampil("SELECT * FROM daftar");
         <?php foreach ($daftars as $daftar) : ?>
             <div class="daftar">
                 <h1 class="daftar-nama"><?= $daftar["nama"] ?></h1>
-                <img src="./img/daftar/<?= $daftar["gambar"] ?>.jpg" alt="<?= $daftar["nama"] ?>" class="daftar-gambar">
+                <img src="./img/daftar/<?= $daftar["gambar"] ?>" alt="<?= $daftar["nama"] ?>" class="daftar-gambar">
                 <div class="daftar-keterangan-1">
                     <h1 class="daftar-keterangan-1-1"><?= $daftar["harga"] ?></h1>
                     <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stok"] ?></h1>
