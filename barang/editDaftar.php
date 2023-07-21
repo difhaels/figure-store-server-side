@@ -36,8 +36,8 @@ if (isset($_POST["submit"])) {
                 <input type="text" name="nama" id="nama" required value="<?= $daftar["nama"]; ?>">
             </li>
             <li>
-                <label for="tahun">Ubah Stok</label><br>
-                <input type="text" name="tahun" id="tahun" required value="<?= $daftar["stok"]; ?>">
+                <label for="stok">Ubah Stok</label><br>
+                <input type="text" name="stok" id="stok" required value="<?= $daftar["stok"]; ?>">
             </li>
             <li>
                 <label for="harga">Ubah Harga</label><br>
