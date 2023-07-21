@@ -107,15 +107,6 @@ function uploud()
     return $namaFileBaru;
 }
 
-// fungsi untuk menghapus data / Delete daftar
-function hapusDaftar($id)
-{
-    global $koneksi;
-    mysqli_query($koneksi, "DELETE FROM daftar WHERE id = $id");
-    return mysqli_affected_rows($koneksi);
-}
-
-
 // fungsi untuk mengubah / Update daftar
 function ubah($data)
 {
@@ -125,9 +116,25 @@ function ubah($data)
     $nama = htmlspecialchars($data["nama"]);
     $stok = htmlspecialchars($data["stok"]);
     $harga = htmlspecialchars($data["harga"]);
+    $gambarLama = htmlspecialchars($data['gambarLama']);
 
-    $query = "UPDATE daftar SET nama = '$nama', stok = '$stok', harga = '$harga' WHERE id = $id";
+    // cek apakah user pilih gambar baru atau tidak
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambarLama;
+    } else {
+        $gambar = uploud();
+    }
+
+    $query = "UPDATE daftar SET gambar='$gambar', nama = '$nama', stok = '$stok', harga = '$harga' WHERE id = $id";
 
     mysqli_query($koneksi, $query);
+    return mysqli_affected_rows($koneksi);
+}
+
+// fungsi untuk menghapus data / Delete daftar
+function hapusDaftar($id)
+{
+    global $koneksi;
+    mysqli_query($koneksi, "DELETE FROM daftar WHERE id = $id");
     return mysqli_affected_rows($koneksi);
 }
