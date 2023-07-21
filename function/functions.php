@@ -35,8 +35,23 @@ function hapusAdmin($id)
     mysqli_query($koneksi, "DELETE FROM admin WHERE id = $id");
     return mysqli_affected_rows($koneksi);
 }
+// fungsi untuk manambahkan daftar
+function tambahDaftar($data)
+{
+    global $koneksi;
+    $nama = htmlspecialchars($data["nama"]);
+    $stok = htmlspecialchars($data["stok"]);
+    $harga = htmlspecialchars($data["harga"]);
+    $gambar = htmlspecialchars($data["gambar"]);
 
-// fungsi untuk menghapus data / Delete admin
+    $query = "INSERT INTO daftar VALUES ('', '$gambar','$nama', '$stok', '$harga')";
+
+    mysqli_query($koneksi, $query);
+    return mysqli_affected_rows($koneksi);
+}
+
+
+// fungsi untuk menghapus data / Delete daftar
 function hapusDaftar($id)
 {
     global $koneksi;

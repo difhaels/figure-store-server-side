@@ -1,5 +1,5 @@
 <?php
-require 'functions.php';
+require '../function/functions.php';
 $id = $_GET["id"];
 
 if (hapusDaftar($id) > 0) {

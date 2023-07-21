@@ -25,7 +25,7 @@ $daftars = tampil("SELECT * FROM daftar");
 <body class="p-5 bg-[#54efc3] mx-10">
     <div>
         <a href="">Pembayaran</a>
-        <a href="">Tambah Daftar</a>
+        <a href="barang/tambahBarang.php">Tambah Daftar</a>
         <a href="admin/admin.php">Admin</a>
         <a href="">Register Member</a>
     </div>
