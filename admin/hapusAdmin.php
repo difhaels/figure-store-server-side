@@ -1,12 +1,12 @@
 <?php
-require 'functions.php';
+require '../function/functions.php';
 $id = $_GET["id"];
 
-if (hapusDaftar($id) > 0) {
+if (hapusAdmin($id) > 0) {
     echo "
         <script>
             alert('data berhasil dihapus!');
-            document.location.href = 'index.php';
+            document.location.href = 'admin.php';
         </script>
         ";
 };

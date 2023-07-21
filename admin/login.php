@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'functions.php';
+require '../function/functions.php';
 
 // set cookie | cek ada cookie atau tidak
 if (isset($_COOKIE['key'])) {
@@ -9,7 +9,7 @@ if (isset($_COOKIE['key'])) {
 
 // jika login true pindah ke halaman index.html
 if (isset($_SESSION["login"])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 
@@ -41,7 +41,7 @@ if (isset($_POST["login"])) {
             }
 
             // pindah ke halaman index
-            header("Location: index.php");
+            header("Location: ../index.php");
             exit;
         } else {
             echo "

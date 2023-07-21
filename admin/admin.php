@@ -2,11 +2,11 @@
 // cek user udah login belum
 session_start();
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit;
 }
 
-require 'functions.php';
+require '../function/functions.php';
 
 // cek apakah tombol daftar sudah ditekan
 if (isset($_POST["daftar"])) {
@@ -34,7 +34,7 @@ $admins = tampil("SELECT * FROM admin");
 
 <body>
     <div>
-        <a href="index.php">back to home</a>
+        <a href="../index.php">back to home</a>
     </div>
     <div>
         <h1>Tambah Admin</h1>

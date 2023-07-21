@@ -1,5 +1,5 @@
 <?php
-require("functions.php");
+require("../function/functions.php");
 
 // ambil data id dari url get
 $id = $_GET["id"];
@@ -12,7 +12,7 @@ if (isset($_POST["submit"])) {
         echo "
         <script>
             alert('data berhasil diubah!');
-            document.location.href = 'index.php';
+            document.location.href = '../index.php';
         </script>
         ";
     }
@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
         <p>Jangan diedit jika tidak ingin diedit</p>
         <button type="submit" name="submit">Submit</button>
     </form>
-    <a href="index.php">back</a>
+    <a href="../index.php">back</a>
 </body>
 
 </html>

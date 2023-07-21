@@ -4,11 +4,11 @@ session_start();
 
 // cek user udah login belum? jika belum akan pindah ke halaman login
 if (!isset($_SESSION["login"])) {
-    header("Location: login.php");
+    header("Location: admin/login.php");
     exit;
 }
 
-require('functions.php');
+require('function/functions.php');
 
 // menampilkan daftar
 $daftars = tampil("SELECT * FROM daftar");
@@ -26,11 +26,11 @@ $daftars = tampil("SELECT * FROM daftar");
     <div>
         <a href="">Pembayaran</a>
         <a href="">Tambah Daftar</a>
-        <a href="admin.php">Admin</a>
+        <a href="admin/admin.php">Admin</a>
         <a href="">Register Member</a>
     </div>
     <h1 class="tittle mb-5">Kasir App - Admin Side</h1>
-    <a href="logout.php">Logout</a>
+    <a href="admin/logout.php">Logout</a>
     <div class="flex flex-wrap gap-2">
 
         <?php foreach ($daftars as $daftar) : ?>
@@ -42,8 +42,8 @@ $daftars = tampil("SELECT * FROM daftar");
                     <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stok"] ?></h1>
                 </div>
                 <div class="px-5 flex justify-center items-center gap-5">
-                    <a href="editDaftar.php?id=<?= $daftar['id'] ?>">Edit</a>
-                    <a href="hapusDaftar.php?id=<?= $daftar['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">
+                    <a href="barang/editDaftar.php?id=<?= $daftar['id'] ?>">Edit</a>
+                    <a href="barang/hapusDaftar.php?id=<?= $daftar['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">
                         <img src="./img/icon/delete.png" alt="delete" width="25">
                     </a>
                 </div>
