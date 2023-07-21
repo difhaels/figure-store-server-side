@@ -99,9 +99,12 @@ function uploud()
 
     // lolos pengecekan, 
     // akan mengisi file img/daftar dari tambahBarang karena dia yang menjalankan function ini
-    move_uploaded_file($tmpName, '../img/daftar/' . $namaFile);
+    $namaFileBaru = uniqid();
+    $namaFileBaru .= '.';
+    $namaFileBaru .= $ekstensiGambar;
+    move_uploaded_file($tmpName, '../img/daftar/' . $namaFileBaru);
 
-    return $namaFile;
+    return $namaFileBaru;
 }
 
 // fungsi untuk menghapus data / Delete daftar
