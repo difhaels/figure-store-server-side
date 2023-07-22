@@ -38,7 +38,7 @@ $daftars = read("SELECT * FROM item");
                 <h1 class="daftar-nama"><?= $daftar["name"] ?></h1>
                 <img src="./img/item/<?= $daftar["image"] ?>" alt="<?= $daftar["name"] ?>" class="daftar-gambar">
                 <div class="daftar-keterangan-1">
-                    <h1 class="daftar-keterangan-1-1"><?= $daftar["price"] ?></h1>
+                    <h1 class="daftar-keterangan-1-1">Rp. <?= $daftar["price"] ?></h1>
                     <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stock"] ?></h1>
                 </div>
                 <div class="px-5 flex justify-center items-center gap-5">
