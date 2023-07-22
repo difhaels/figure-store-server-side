@@ -1,6 +1,7 @@
 <?php
 session_start();
 require '../function/functions.php';
+require '../function/functions-admin.php';
 
 // set cookie | cek ada cookie atau tidak
 if (isset($_COOKIE['key'])) {

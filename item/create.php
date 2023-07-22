@@ -5,11 +5,11 @@ if (!isset($_SESSION["login"])) {
     header("Location: ../admin/login.php");
     exit;
 }
-require("../function/functions.php");
-if (isset($_POST["submit"])) {
+require("../function/functions-item.php");
 
+if (isset($_POST["submit"])) {
     // cek keberhasilan
-    if (tambahDaftar($_POST) > 0) {
+    if (create($_POST) > 0) {
         echo "
         <script>
             alert('data berhasil dimasukan!');
@@ -39,20 +39,20 @@ if (isset($_POST["submit"])) {
     <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
-                <label for="nama">Nama Barang :</label><br>
-                <input type="text" name="nama" id="nama" required>
+                <label for="name">Nama Barang :</label><br>
+                <input type="text" name="name" id="name" required>
             </li>
             <li>
-                <label for="stok">Jumlah Stok Saat Ini :</label><br>
-                <input type="text" name="stok" id="stok" required>
+                <label for="stock">Jumlah Stok Saat Ini :</label><br>
+                <input type="text" name="stock" id="stock" required>
             </li>
             <li>
-                <label for="harga">Harga :</label><br>
-                <input type="text" name="harga" id="harga" required>
+                <label for="price">price :</label><br>
+                <input type="text" name="price" id="price" required>
             </li>
             <li>
-                <label for="gambar">Gambar :</label><br>
-                <input type="file" name="gambar" id="gambar">
+                <label for="image">image :</label><br>
+                <input type="file" name="image" id="image">
             </li>
         </ul>
         <button type="submit" name="submit">Submit</button>

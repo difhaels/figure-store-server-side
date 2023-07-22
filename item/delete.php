@@ -1,8 +1,8 @@
 <?php
-require '../function/functions.php';
+require '../function/functions-item.php';
 $id = $_GET["id"];
 
-if (hapusDaftar($id) > 0) {
+if (delete($id) > 0) {
     echo "
         <script>
             alert('data berhasil dihapus!');

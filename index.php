@@ -11,7 +11,7 @@ if (!isset($_SESSION["login"])) {
 require('function/functions.php');
 
 // menampilkan daftar
-$daftars = tampil("SELECT * FROM item");
+$daftars = read("SELECT * FROM item");
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ $daftars = tampil("SELECT * FROM item");
 <body class="p-5 bg-[#54efc3] mx-10">
     <div>
         <a href="">Pembayaran</a>
-        <a href="barang/tambahBarang.php">Tambah Daftar</a>
+        <a href="item/create.php">Tambah Daftar</a>
         <a href="admin/admin.php">Admin</a>
         <a href="">Register Member</a>
     </div>
@@ -35,15 +35,15 @@ $daftars = tampil("SELECT * FROM item");
 
         <?php foreach ($daftars as $daftar) : ?>
             <div class="daftar">
-                <h1 class="daftar-nama"><?= $daftar["nama"] ?></h1>
-                <img src="./img/daftar/<?= $daftar["gambar"] ?>" alt="<?= $daftar["nama"] ?>" class="daftar-gambar">
+                <h1 class="daftar-nama"><?= $daftar["name"] ?></h1>
+                <img src="./img/item/<?= $daftar["image"] ?>" alt="<?= $daftar["name"] ?>" class="daftar-gambar">
                 <div class="daftar-keterangan-1">
-                    <h1 class="daftar-keterangan-1-1"><?= $daftar["harga"] ?></h1>
-                    <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stok"] ?></h1>
+                    <h1 class="daftar-keterangan-1-1"><?= $daftar["price"] ?></h1>
+                    <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stock"] ?></h1>
                 </div>
                 <div class="px-5 flex justify-center items-center gap-5">
-                    <a href="barang/editDaftar.php?id=<?= $daftar['id'] ?>">Edit</a>
-                    <a href="barang/hapusDaftar.php?id=<?= $daftar['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">
+                    <a href="item/update.php?id=<?= $daftar['id'] ?>">Edit</a>
+                    <a href="item/delete.php?id=<?= $daftar['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">
                         <img src="./img/icon/delete.png" alt="delete" width="25">
                     </a>
                 </div>

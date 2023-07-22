@@ -6,12 +6,12 @@ if (!isset($_SESSION["login"])) {
     exit;
 }
 
-require '../function/functions.php';
+require '../function/functions-admin.php';
 
-// cek apakah tombol daftar sudah ditekan
-if (isset($_POST["daftar"])) {
+// cek apakah tombol add sudah ditekan
+if (isset($_POST["add"])) {
     // cek keberhasilan
-    if (tambahAdmin($_POST) > 0) {
+    if (create($_POST) > 0) {
         echo "
         <script>
             alert('data berhasil dimasukan!');
@@ -21,7 +21,7 @@ if (isset($_POST["daftar"])) {
 }
 
 // membaca table admin
-$admins = tampil("SELECT * FROM admin");
+$admins = read("SELECT * FROM admin");
 
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ $admins = tampil("SELECT * FROM admin");
         <form action="" method="post">
             <input type="text" name="username" placeholder="masukan username">
             <input type="password" name="password" placeholder="masukan password">
-            <button type="submit" name="daftar">tambah</button>
+            <button type="submit" name="add">tambah</button>
         </form>
     </div>
     <div>
