@@ -29,7 +29,7 @@ $daftars = read("SELECT * FROM item");
         <a href="admin/admin.php">Admin</a>
         <a href="">Register Member</a>
     </div>
-    <h1 class="tittle mb-5">Kasir App - Admin Side</h1>
+    <h1 class="tittle mb-5">Anime Store - Server Side</h1>
     <a href="admin/logout.php">Logout</a>
     <div class="flex flex-wrap gap-2">
 
