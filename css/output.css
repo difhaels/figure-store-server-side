@@ -534,9 +534,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .mb-5 {
@@ -545,6 +544,18 @@ video {
 
 .flex {
   display: flex;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .flex-wrap {
@@ -567,18 +578,48 @@ video {
   gap: 1.25rem;
 }
 
-.bg-\[\#54efc3\] {
+.bg-\[\#1B6B93\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(84 239 195 / var(--tw-bg-opacity));
+  background-color: rgb(27 107 147 / var(--tw-bg-opacity));
 }
 
-.p-5 {
-  padding: 1.25rem;
+.bg-\[\#4FC0D0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 192 208 / var(--tw-bg-opacity));
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+/* halaman utama start */
+
+.side-option {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 75 96 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .tittle {
@@ -587,7 +628,7 @@ video {
   font-weight: 700;
 }
 
-.daftar {
+.item {
   width: 14rem;
   border-radius: 0.125rem;
   --tw-bg-opacity: 1;
@@ -597,7 +638,7 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.daftar-nama {
+.item-nama {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
@@ -607,13 +648,13 @@ video {
   font-weight: 700;
 }
 
-.daftar-gambar {
+.item-gambar {
   margin-left: auto;
   margin-right: auto;
   height: 10rem;
 }
 
-.daftar-keterangan-1 {
+.item-keterangan-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -623,9 +664,23 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.daftar-keterangan-1-1 {
+.item-keterangan-1-1 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(20 184 166 / var(--tw-text-opacity));
 }
+
+.edit {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 175 25 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* halaman utama end */

@@ -10,8 +10,8 @@ if (!isset($_SESSION["login"])) {
 
 require('function/functions.php');
 
-// menampilkan daftar
-$daftars = read("SELECT * FROM item");
+// menampilkan item
+$items = read("SELECT * FROM item");
 
 ?>
 <!DOCTYPE html>
@@ -22,33 +22,47 @@ $daftars = read("SELECT * FROM item");
     <link rel="stylesheet" href="./css/output.css">
 </head>
 
-<body class="p-5 bg-[#54efc3] mx-10">
-    <div>
-        <a href="">Pembayaran</a>
-        <a href="item/create.php">Tambah Daftar</a>
-        <a href="admin/admin.php">Admin</a>
-        <a href="">Register Member</a>
-    </div>
-    <h1 class="tittle mb-5">Anime Store - Server Side</h1>
-    <a href="admin/logout.php">Logout</a>
-    <div class="flex flex-wrap gap-2">
+<body class="bg-[#4FC0D0]">
+    <div class="flex">
 
-        <?php foreach ($daftars as $daftar) : ?>
-            <div class="daftar">
-                <h1 class="daftar-nama"><?= $daftar["name"] ?></h1>
-                <img src="./img/item/<?= $daftar["image"] ?>" alt="<?= $daftar["name"] ?>" class="daftar-gambar">
-                <div class="daftar-keterangan-1">
-                    <h1 class="daftar-keterangan-1-1">Rp. <?= $daftar["price"] ?></h1>
-                    <h1 class="daftar-keterangan-1-1">Stock : <?= $daftar["stock"] ?></h1>
-                </div>
-                <div class="px-5 flex justify-center items-center gap-5">
-                    <a href="item/update.php?id=<?= $daftar['id'] ?>">Edit</a>
-                    <a href="item/delete.php?id=<?= $daftar['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')">
-                        <img src="./img/icon/delete.png" alt="delete" width="25">
-                    </a>
-                </div>
+        <ul class="w-[20%] h-[100vh] bg-[#1B6B93] pt-5">
+            <li class="side-option">
+                <a href="">Pesananan</a>
+            </li>
+            <li class="side-option">
+                <a href="item/create.php">Tambah Item</a>
+            </li>
+            <li class="side-option">
+                <a href="admin/admin.php">Admin</a>
+            </li>
+            <li class="side-option">
+                <a href="admin/logout.php">Logout</a>
+            </li>
+        </ul>
+
+        <div class="w-[80%] p-10">
+            <h1 class="tittle mb-5">Anime Store - Server Side</h1>
+            <div class="flex flex-wrap gap-2">
+
+                <?php foreach ($items as $item) : ?>
+                    <div class="item">
+                        <h1 class="item-nama"><?= $item["name"] ?></h1>
+                        <img src="./img/item/<?= $item["image"] ?>" alt="<?= $item["name"] ?>" class="item-gambar">
+                        <div class="item-keterangan-1">
+                            <h1 class="item-keterangan-1-1">Rp. <?= $item["price"] ?></h1>
+                            <h1 class="item-keterangan-1-1">Stock : <?= $item["stock"] ?></h1>
+                        </div>
+                        <div class="px-5 flex justify-center items-center gap-5 mb-3">
+                            <a href="item/update.php?id=<?= $item['id'] ?>" class="edit">Edit</a>
+                            <a href="item/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')" class="delete">
+                                <img src="./img/icon/delete.png" alt="delete" width="25">
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
             </div>
-        <?php endforeach; ?>
+        </div>
 
     </div>
 
