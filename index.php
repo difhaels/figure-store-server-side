@@ -11,7 +11,7 @@ if (!isset($_SESSION["login"])) {
 require('function/functions.php');
 
 // menampilkan daftar
-$daftars = tampil("SELECT * FROM daftar");
+$daftars = tampil("SELECT * FROM item");
 
 ?>
 <!DOCTYPE html>

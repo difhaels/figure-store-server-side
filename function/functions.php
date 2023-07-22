@@ -1,7 +1,7 @@
 <?php
 
 // koneksi database
-$koneksi = mysqli_connect("localhost", "root", "", "kasir");
+$koneksi = mysqli_connect("localhost", "root", "", "anime_store");
 
 // function untuk menampilkan
 function tampil($query)
