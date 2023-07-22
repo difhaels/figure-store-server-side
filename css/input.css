@@ -24,8 +24,12 @@
 .item-keterangan-1-1 {
     @apply text-sm text-teal-500;
 }
-.edit {
+.button-yellow {
     @apply bg-[#F5AF19] text-white px-5 py-2 rounded-xl
 }
 
 /* halaman utama end */
+
+.login {
+    @apply py-1 
+}

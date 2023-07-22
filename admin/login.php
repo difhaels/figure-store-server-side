@@ -65,16 +65,29 @@ if (isset($_POST["login"])) {
 
 <head>
     <title>Login Admin</title>
+    <link rel="stylesheet" href="../css/output.css">
 </head>
 
-<body>
-    <form action="" method="post">
-        <input type="text" name="username" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="checkbox" name="remember" id="remember">
-        <label for="remember">Remember me</label>
-        <button type="submit" name="login" class="bg-white text-teal-500 hover:text-teal-300">Login</button>
-    </form>
+<body class="bg-[#1B6B93] flex justify-center items-center h-screen">
+    <div class="bg-white w-[500px] rounded-xl shadow-2xl">
+        <form action="" method="post">
+            <ul class="p-5">
+                <li class="login">
+                    <input type="text" name="username" placeholder="Username" class="w-full h-10 border-2 border-black rounded-lg px-3">
+                </li>
+                <li class="login">
+                    <input type="password" name="password" placeholder="Password" class="w-full h-10 border-2 border-black rounded-lg px-3">
+                </li>
+                <li class="login px-1">
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember me</label>
+                </li>
+                <li class="login">
+                    <button type="submit" name="login" class="button-yellow">Login</button>
+                </li>
+            </ul>
+        </form>
+    </div>
 </body>
 
 </html>
