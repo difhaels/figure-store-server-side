@@ -22,7 +22,7 @@ $items = read("SELECT * FROM item");
     <link rel="stylesheet" href="./css/output.css">
 </head>
 
-<body class="bg-bg2">
+<body>
     <div class="flex">
 
         <div class="w-[20%] h-[100vh] bg-bg1 pt-5 fixed">

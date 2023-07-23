@@ -642,11 +642,6 @@ video {
   background-color: rgb(79 192 208 / var(--tw-bg-opacity));
 }
 
-.bg-bg2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(27 107 147 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -688,6 +683,13 @@ video {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+body {
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-position: 50% 25%;
+  background-attachment: fixed;
 }
 
 /* halaman utama start */
