@@ -23,50 +23,46 @@ $items = read("SELECT * FROM item");
 </head>
 
 <body>
-    <div class="flex">
-
-        <div class="w-[20%] h-[100vh] bg-bg1 pt-5 fixed">
+    <div class="bg-bg2 py-5 text-white flex items-center fixed w-full justify-between px-10">
+        <h1 class="font-extrabold text-4xl">SERVER SIDE</h1>
+        <div class="flex gap-6">
             <a href="">
-                <div class="grou side-option">Pesananan</div>
+                <img src="./img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
             </a>
             <a href="item/create.php">
-
-                <div class="side-option">Tambah Item</div>
+                <img src="./img/icon/create.png" class="w-[66px] lg:w-[42px] change-color">
             </a>
             <a href="admin/admin.php">
-                <div class="side-option">Admin</div>
+                <img src="./img/icon/admin.png" class="w-[66px] lg:w-[42px] change-color">
             </a>
             <a href="admin/logout.php">
-                <div class="side-option">Logout</div>
+                <img src="./img/icon/logout.png" class="w-[65px] lg:w-[41px] change-color">
             </a>
         </div>
-
-        <div class="w-[80%] p-10 absolute right-0">
-            <h1 class="tittle mb-5 mx-auto flex justify-center text-white">Anime Store - Server Side</h1>
-            <div class="flex flex-wrap gap-2 justify-center">
-
-                <?php foreach ($items as $item) : ?>
-                    <div class="item">
-                        <h1 class="item-nama"><?= $item["name"] ?></h1>
-                        <img src="./img/item/<?= $item["image"] ?>" alt="<?= $item["name"] ?>" class="item-gambar">
-                        <div class="item-keterangan-1">
-                            <h1 class="item-keterangan-1-1">Rp. <?= $item["price"] ?></h1>
-                            <h1 class="item-keterangan-1-1">Stock : <?= $item["stock"] ?></h1>
-                        </div>
-                        <div class="px-5 flex justify-center items-center gap-5 mb-3">
-                            <a href="item/update.php?id=<?= $item['id'] ?>" class="button-yellow">Edit</a>
-                            <a href="item/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')" class="delete">
-                                <img src="./img/icon/delete.png" alt="delete" width="25">
-                            </a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-
-            </div>
-        </div>
-
     </div>
 
+    <div class="p-10 pt-40 lg:pt-32">
+        <div class="flex flex-wrap gap-2 justify-center">
+
+            <?php foreach ($items as $item) : ?>
+                <div class="item">
+                    <h1 class="item-nama"><?= $item["name"] ?></h1>
+                    <img src="./img/item/<?= $item["image"] ?>" alt="<?= $item["name"] ?>" class="item-gambar">
+                    <div class="item-keterangan-1">
+                        <h1 class="item-keterangan-1-1">Rp. <?= $item["price"] ?></h1>
+                        <h1 class="item-keterangan-1-1">Stock : <?= $item["stock"] ?></h1>
+                    </div>
+                    <div class="px-5 flex justify-center items-center gap-5 mb-3">
+                        <a href="item/update.php?id=<?= $item['id'] ?>" class="button-yellow">Edit</a>
+                        <a href="item/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')" class="delete">
+                            <img src="./img/icon/delete.png" alt="delete" width="25">
+                        </a>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
+        </div>
+    </div>
 </body>
 
 </html>
