@@ -41,8 +41,8 @@ $items = read("SELECT * FROM item");
         </ul>
 
         <div class="w-[80%] p-10 absolute right-0">
-            <h1 class="tittle mb-5 justify-center">Anime Store - Server Side</h1>
-            <div class="flex flex-wrap gap-2 mx-auto">
+            <h1 class="tittle mb-5 mx-auto flex justify-center">Anime Store - Server Side</h1>
+            <div class="flex flex-wrap gap-2 justify-center">
 
                 <?php foreach ($items as $item) : ?>
                     <div class="item">
