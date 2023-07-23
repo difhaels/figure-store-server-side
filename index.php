@@ -25,20 +25,21 @@ $items = read("SELECT * FROM item");
 <body class="bg-[#4FC0D0]">
     <div class="flex">
 
-        <ul class="w-[20%] h-[100vh] bg-[#1B6B93] pt-5 fixed">
-            <li class="side-option">
-                <a href="">Pesananan</a>
-            </li>
-            <li class="side-option">
-                <a href="item/create.php">Tambah Item</a>
-            </li>
-            <li class="side-option">
-                <a href="admin/admin.php">Admin</a>
-            </li>
-            <li class="side-option">
-                <a href="admin/logout.php">Logout</a>
-            </li>
-        </ul>
+        <div class="w-[20%] h-[100vh] bg-[#1B6B93] pt-5 fixed">
+            <a href="">
+                <div class="grou side-option">Pesananan</div>
+            </a>
+            <a href="item/create.php">
+
+                <div class="side-option">Tambah Item</div>
+            </a>
+            <a href="admin/admin.php">
+                <div class="side-option">Admin</div>
+            </a>
+            <a href="admin/logout.php">
+                <div class="side-option">Logout</div>
+            </a>
+        </div>
 
         <div class="w-[80%] p-10 absolute right-0">
             <h1 class="tittle mb-5 mx-auto flex justify-center">Anime Store - Server Side</h1>
