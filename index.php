@@ -24,7 +24,10 @@ $items = read("SELECT * FROM item");
 
 <body>
     <div class="bg-bg2 py-5 text-white flex items-center fixed w-full justify-between px-10">
-        <h1 class="font-extrabold text-4xl">SERVER SIDE</h1>
+        <div class="flex items-end">
+            <h1 class="font-extrabold text-4xl">FIGURE STORE</h1>
+            <h1>.server side</h1>
+        </div>
         <div class="flex gap-6">
             <a href="">
                 <img src="./img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
