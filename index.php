@@ -22,10 +22,10 @@ $items = read("SELECT * FROM item");
     <link rel="stylesheet" href="./css/output.css">
 </head>
 
-<body class="bg-[#4FC0D0]">
+<body class="bg-bg2">
     <div class="flex">
 
-        <div class="w-[20%] h-[100vh] bg-[#1B6B93] pt-5 fixed">
+        <div class="w-[20%] h-[100vh] bg-bg1 pt-5 fixed">
             <a href="">
                 <div class="grou side-option">Pesananan</div>
             </a>
@@ -42,7 +42,7 @@ $items = read("SELECT * FROM item");
         </div>
 
         <div class="w-[80%] p-10 absolute right-0">
-            <h1 class="tittle mb-5 mx-auto flex justify-center">Anime Store - Server Side</h1>
+            <h1 class="tittle mb-5 mx-auto flex justify-center text-white">Anime Store - Server Side</h1>
             <div class="flex flex-wrap gap-2 justify-center">
 
                 <?php foreach ($items as $item) : ?>

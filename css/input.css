@@ -4,7 +4,7 @@
 
 /* halaman utama start */
 .side-option {
-    @apply text-white border-2 border-white mx-4 my-2 px-5 py-2 rounded-xl bg-[#164B60];
+    @apply text-white border-2 border-white mx-4 my-2 px-5 py-2 rounded-xl bg-button1 hover:bg-bg1;
 }
 .tittle {
     @apply font-bold text-xl;
@@ -25,7 +25,7 @@
     @apply text-sm text-teal-500;
 }
 .button-yellow {
-    @apply bg-[#F5AF19] text-white px-5 py-2 rounded-xl
+    @apply bg-button2 text-white px-5 py-2 rounded-xl
 }
 
 /* halaman utama end */
