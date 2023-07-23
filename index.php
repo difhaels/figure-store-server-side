@@ -25,7 +25,7 @@ $items = read("SELECT * FROM item");
 <body class="bg-[#4FC0D0]">
     <div class="flex">
 
-        <ul class="w-[20%] h-[100vh] bg-[#1B6B93] pt-5">
+        <ul class="w-[20%] h-[100vh] bg-[#1B6B93] pt-5 fixed">
             <li class="side-option">
                 <a href="">Pesananan</a>
             </li>
@@ -40,9 +40,9 @@ $items = read("SELECT * FROM item");
             </li>
         </ul>
 
-        <div class="w-[80%] p-10">
-            <h1 class="tittle mb-5">Anime Store - Server Side</h1>
-            <div class="flex flex-wrap gap-2">
+        <div class="w-[80%] p-10 absolute right-0">
+            <h1 class="tittle mb-5 justify-center">Anime Store - Server Side</h1>
+            <div class="flex flex-wrap gap-2 mx-auto">
 
                 <?php foreach ($items as $item) : ?>
                     <div class="item">
