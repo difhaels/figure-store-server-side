@@ -1,7 +1,7 @@
 <?php
 
 // koneksi database
-$koneksi = mysqli_connect("localhost", "root", "", "anime_store");
+$koneksi = mysqli_connect("localhost", "root", "", "figure_store");
 
 // function untuk menampilkan
 function read($query)
