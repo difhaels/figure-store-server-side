@@ -135,7 +135,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image1</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/item/<?= $item['image1'] ?>" alt="image1" class="w-20 ">
+                        <img src="../img/sub/<?= $item['image1'] ?>" alt="image1" class="w-20 ">
                     </div>
                     <input type="file" name="image1" id="image1">
                 </div>
