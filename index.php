@@ -22,7 +22,7 @@ $items = read("SELECT * FROM item");
     <link rel="stylesheet" href="./css/output.css">
 </head>
 
-<body>
+<body class="main">
     <div class="bg-bg2 py-5 text-white flex items-center fixed w-full justify-between px-10">
         <div class="flex items-end">
             <h1 class="font-extrabold text-4xl">FIGURE STORE</h1>

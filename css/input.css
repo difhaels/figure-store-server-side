@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-body {
+body.main {
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: 50% 25%;
