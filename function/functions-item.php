@@ -14,7 +14,7 @@ function create($data)
         return false;
     }
 
-    $query = "INSERT INTO item VALUES ('', '$image','$name', '$stock', '$price')";
+    $query = "INSERT INTO item (id, name, code, image, image1, image2, image3, image4, stock, price, type, source, dimensions, material) VALUES ('', '$name','', '$image', '', '', '', '', '$stock', '$price', '', '', '', '')";
 
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);
@@ -64,12 +64,9 @@ function uploud()
 
     // lolos pengecekan, 
     // akan mengisi file img/daftar dari tambahBarang karena dia yang menjalankan function ini
-    $namaFileBaru = uniqid();
-    $namaFileBaru .= '.';
-    $namaFileBaru .= $ekstensiGambar;
-    move_uploaded_file($tmpName, '../img/item/' . $namaFileBaru);
+    move_uploaded_file($tmpName, '../img/item/' . $namaFile);
 
-    return $namaFileBaru;
+    return $namaFile;
 }
 
 

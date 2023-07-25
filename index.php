@@ -18,7 +18,7 @@ $items = read("SELECT * FROM item");
 <html lang="en">
 
 <head>
-    <title>Kasir App</title>
+    <title>Figrue Store Server Side</title>
     <link rel="stylesheet" href="./css/output.css">
 </head>
 
