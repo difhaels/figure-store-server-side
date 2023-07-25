@@ -55,7 +55,8 @@ $items = read("SELECT * FROM item");
                         <h1 class="item-keterangan-1-1">Rp. <?= $item["price"] ?></h1>
                         <h1 class="item-keterangan-1-1">Stock : <?= $item["stock"] ?></h1>
                     </div>
-                    <div class="px-5 flex justify-center items-center gap-5 mb-3">
+                    <div class="px-5 flex justify-center items-center gap-1 mb-3">
+                        <a href="item/detail.php?id=<?= $item['id'] ?>" class="button-red">Detail</a>
                         <a href="item/update.php?id=<?= $item['id'] ?>" class="button-yellow">Edit</a>
                         <a href="item/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')" class="delete">
                             <img src="./img/icon/delete.png" alt="delete" width="25">

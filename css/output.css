@@ -562,14 +562,6 @@ video {
   width: 500px;
 }
 
-.w-\[80px\] {
-  width: 80px;
-}
-
-.w-full {
-  width: 100%;
-}
-
 .w-\[65px\] {
   width: 65px;
 }
@@ -580,6 +572,10 @@ video {
 
 .w-\[70px\] {
   width: 70px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-wrap {
@@ -602,12 +598,12 @@ video {
   justify-content: space-between;
 }
 
-.gap-2 {
-  gap: 0.5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
-.gap-5 {
-  gap: 1.25rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-6 {
@@ -659,6 +655,11 @@ video {
   padding-right: 0.25rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -674,18 +675,8 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .pt-40 {
   padding-top: 10rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-4xl {
@@ -706,10 +697,6 @@ video {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 body {
@@ -780,6 +767,18 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.button-red {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 35 13 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /* halaman utama end */
 
 .login {
@@ -788,10 +787,6 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-\[50px\] {
-    width: 50px;
-  }
-
   .lg\:w-\[41px\] {
     width: 41px;
   }
