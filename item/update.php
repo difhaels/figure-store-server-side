@@ -12,7 +12,6 @@ if (isset($_POST["submit"])) {
         echo "
         <script>
             alert('Updated Success!');
-            document.location.href = '../index.php';
         </script>
         ";
     }
@@ -39,10 +38,10 @@ if (isset($_POST["submit"])) {
             <a href="">
                 <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
             </a>
-            <a href="item/create.php">
+            <a href="../item/create.php">
                 <img src="../img/icon/create.png" class="w-[66px] lg:w-[42px] change-color">
             </a>
-            <a href="admin/admin.php">
+            <a href="../admin/admin.php">
                 <img src="../img/icon/admin.png" class="w-[66px] lg:w-[42px] change-color">
             </a>
             <a href="../index.php">
@@ -120,14 +119,14 @@ if (isset($_POST["submit"])) {
 
             </div>
 
-            <h1 class="pt-10 pb-3">image, sub image diisi untuk foto tambahan</h1>
+            <h1 class="pt-10 pb-3">*image, sub image diisi jika ada foto tambahan</h1>
 
             <div class="flex flex-wrap gap-3">
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Image</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/item/<?= $item['image'] ?>" alt="image" class="w-20 ">
+                        <img src="../img/item/<?= $item['image'] ?>" alt="image" class="h-32 ">
                     </div>
                     <input type="file" name="image" id="image">
                 </div>
@@ -135,7 +134,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image1</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/sub/<?= $item['image1'] ?>" alt="image1" class="w-20 ">
+                        <img src="../img/sub/<?= $item['image1'] ?>" alt="image1" class="h-32 ">
                     </div>
                     <input type="file" name="image1" id="image1">
                 </div>
@@ -143,7 +142,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image2</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/item/<?= $item['image2'] ?>" alt="image2" class="w-20 ">
+                        <img src="../img/sub/<?= $item['image2'] ?>" alt="image2" class="h-32 ">
                     </div>
                     <input type="file" name="image2" id="image2">
                 </div>
@@ -151,7 +150,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image3</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/item/<?= $item['image3'] ?>" alt="image3" class="w-20 ">
+                        <img src="../img/sub/<?= $item['image3'] ?>" alt="image3" class="h-32 ">
                     </div>
                     <input type="file" name="image3" id="image3">
                 </div>
@@ -159,7 +158,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image4</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/item/<?= $item['image4'] ?>" alt="image4" class="w-20 ">
+                        <img src="../img/sub/<?= $item['image4'] ?>" alt="image4" class="h-32 ">
                     </div>
                     <input type="file" name="image4" id="image4">
                 </div>

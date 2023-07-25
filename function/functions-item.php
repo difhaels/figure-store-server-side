@@ -9,7 +9,7 @@ function create($data)
     $price = htmlspecialchars($data["price"]);
 
     // uploud gamabr
-    $image = uploud();
+    $image = uploud('image', 'item');
     if (!$image) {
         return false;
     }
@@ -21,12 +21,12 @@ function create($data)
 }
 
 // fungsi uploud
-function uploud()
+function uploud($name, $folder)
 {
-    $namaFile = $_FILES['image']['name'];
-    $ukuranFile = $_FILES['image']['size'];
-    $error = $_FILES['image']['error'];
-    $tmpName = $_FILES['image']['tmp_name'];
+    $namaFile = $_FILES[$name]['name'];
+    $ukuranFile = $_FILES[$name]['size'];
+    $error = $_FILES[$name]['error'];
+    $tmpName = $_FILES[$name]['tmp_name'];
 
     // cek ada gambar atau tidak (4 = tidak ada gambar yang diuploud)
     if ($error === 4) {
@@ -64,54 +64,7 @@ function uploud()
 
     // lolos pengecekan, 
     // akan mengisi file img/daftar dari tambahBarang karena dia yang menjalankan function ini
-    move_uploaded_file($tmpName, '../img/item/' . $namaFile);
-
-    return $namaFile;
-}
-function uploudSub()
-{
-    $namaFile = $_FILES['image1']['name'];
-    $ukuranFile = $_FILES['image1']['size'];
-    $error = $_FILES['image1']['error'];
-    $tmpName = $_FILES['image1']['tmp_name'];
-
-    // cek ada gambar atau tidak (4 = tidak ada gambar yang diuploud)
-    if ($error === 4) {
-        echo "
-        <script>
-            alert('Uploud gambar terlebih dahulu');
-        </script>
-        ";
-        return false;
-    }
-
-    // cek yang diup gambar bukan
-    $ekstensiGambarValid = ['png', 'jpeg', 'jpg'];
-    $ekstensiGambar = explode('.', $namaFile);
-    $ekstensiGambar = strtolower(end($ekstensiGambar));
-
-    if (!in_array($ekstensiGambar, $ekstensiGambarValid)) {
-        echo "
-        <script>
-            alert('Anda harus menguploud gambar');
-        </script>
-        ";
-        return false;
-    }
-
-    // cek ukuran gambar 2mb max
-    if ($ukuranFile > 2000000) {
-        echo "
-        <script>
-            alert('Ukuran file terlalu besar max 2 mb');
-        </script>
-        ";
-        return false;
-    }
-
-    // lolos pengecekan, 
-    // akan mengisi file img/daftar dari tambahBarang karena dia yang menjalankan function ini
-    move_uploaded_file($tmpName, '../img/detail/' . $namaFile);
+    move_uploaded_file($tmpName, '../img/' . $folder . '/' . $namaFile);
 
     return $namaFile;
 }
@@ -142,13 +95,31 @@ function update($data)
     if ($_FILES['image']['error'] === 4) {
         $image = $oldImage;
     } else {
-        $image = uploud();
+        $image = uploud('image', 'item');
     }
 
     if ($_FILES['image1']['error'] === 4) {
         $image1 = $oldImage1;
     } else {
-        $image1 = uploudSub();
+        $image1 = uploud('image1', 'sub');
+    }
+
+    if ($_FILES['image2']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image2', 'sub');
+    }
+
+    if ($_FILES['image3']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image3', 'sub');
+    }
+
+    if ($_FILES['image4']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image4', 'sub');
     }
 
     $query = "UPDATE item SET image='$image', image1 = '$image1', name = '$name', code = '$code', stock = '$stock', price = '$price', type = '$type', source = '$source', dimensions = '$dimensions', material = '$material' WHERE id = $id";
