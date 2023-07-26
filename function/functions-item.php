@@ -4,9 +4,16 @@ require '../function/functions.php';
 function create($data)
 {
     global $koneksi;
+    $id = $data["id"];
     $name = htmlspecialchars($data["name"]);
+    $code = htmlspecialchars($data["code"]);
     $stock = htmlspecialchars($data["stock"]);
     $price = htmlspecialchars($data["price"]);
+    $type = htmlspecialchars($data["type"]);
+    $source = htmlspecialchars($data["source"]);
+    $dimensions = htmlspecialchars($data["dimensions"]);
+    $material = htmlspecialchars($data["material"]);
+
 
     // uploud gamabr
     $image = uploud('image', 'item');
