@@ -4,7 +4,6 @@ require '../function/functions.php';
 function create($data)
 {
     global $koneksi;
-    $id = $data["id"];
     $name = htmlspecialchars($data["name"]);
     $code = htmlspecialchars($data["code"]);
     $stock = htmlspecialchars($data["stock"]);
@@ -15,13 +14,40 @@ function create($data)
     $material = htmlspecialchars($data["material"]);
 
 
-    // uploud gamabr
+
+    // uploud image
     $image = uploud('image', 'item');
+    // jika image tidak ada maka akan failed, karena image pertama adalah required
     if (!$image) {
         return false;
     }
 
-    $query = "INSERT INTO item (id, name, code, image, image1, image2, image3, image4, stock, price, type, source, dimensions, material) VALUES ('', '$name','', '$image', '', '', '', '', '$stock', '$price', '', '', '', '')";
+    // upload sub image
+    if ($_FILES['image1']['error'] === 4) {
+        $image1 = "image1";
+    } else {
+        $image1 = uploud('image1', 'sub');
+    }
+
+    if ($_FILES['image2']['error'] === 4) {
+        $image2 = "image2";
+    } else {
+        $image2 = uploud('image2', 'sub');
+    }
+
+    if ($_FILES['image3']['error'] === 4) {
+        $image3 = "image3";
+    } else {
+        $image3 = uploud('image3', 'sub');
+    }
+
+    if ($_FILES['image4']['error'] === 4) {
+        $image4 = "image4";
+    } else {
+        $image4 = uploud('image4', 'sub');
+    }
+
+    $query = "INSERT INTO item (id, name, code, stock, price, type, source, dimensions, material, image, image1, image2, image3, image4) VALUES ('', '$name','$code', '$stock', '$price', '$type', '$source', '$dimensions', '$material', '$image', '$image1', '$image2', '$image3', '$image4')";
 
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);

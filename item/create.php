@@ -12,14 +12,14 @@ if (isset($_POST["submit"])) {
     if (create($_POST) > 0) {
         echo "
         <script>
-            alert('data berhasil dimasukan!');
+            alert('Create Success!');
             document.location.href = '../index.php';
         </script>
         ";
     } else {
         echo "
         <script>
-            alert('data gagal ditambahkan!');
+            alert('Create Failed!');
         </script>
         ";
     }
@@ -58,6 +58,7 @@ if (isset($_POST["submit"])) {
             </a>
         </div>
     </div>
+
     <div class="pt-32 px-10">
         <h1 class="text-xl font-bold">Create(Add) Item</h1>
         <form action="" method="post" enctype="multipart/form-data">
