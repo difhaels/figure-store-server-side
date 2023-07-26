@@ -4,12 +4,19 @@ require '../function/functions.php';
 function create($data)
 {
     global $koneksi;
+    $id = $data["id"];
     $name = htmlspecialchars($data["name"]);
+    $code = htmlspecialchars($data["code"]);
     $stock = htmlspecialchars($data["stock"]);
     $price = htmlspecialchars($data["price"]);
+    $type = htmlspecialchars($data["type"]);
+    $source = htmlspecialchars($data["source"]);
+    $dimensions = htmlspecialchars($data["dimensions"]);
+    $material = htmlspecialchars($data["material"]);
+
 
     // uploud gamabr
-    $image = uploud();
+    $image = uploud('image', 'item');
     if (!$image) {
         return false;
     }
@@ -21,12 +28,12 @@ function create($data)
 }
 
 // fungsi uploud
-function uploud()
+function uploud($name, $folder)
 {
-    $namaFile = $_FILES['image']['name'];
-    $ukuranFile = $_FILES['image']['size'];
-    $error = $_FILES['image']['error'];
-    $tmpName = $_FILES['image']['tmp_name'];
+    $namaFile = $_FILES[$name]['name'];
+    $ukuranFile = $_FILES[$name]['size'];
+    $error = $_FILES[$name]['error'];
+    $tmpName = $_FILES[$name]['tmp_name'];
 
     // cek ada gambar atau tidak (4 = tidak ada gambar yang diuploud)
     if ($error === 4) {
@@ -64,7 +71,7 @@ function uploud()
 
     // lolos pengecekan, 
     // akan mengisi file img/daftar dari tambahBarang karena dia yang menjalankan function ini
-    move_uploaded_file($tmpName, '../img/item/' . $namaFile);
+    move_uploaded_file($tmpName, '../img/' . $folder . '/' . $namaFile);
 
     return $namaFile;
 }
@@ -77,18 +84,52 @@ function update($data)
 
     $id = $data["id"];
     $name = htmlspecialchars($data["name"]);
+    $code = htmlspecialchars($data["code"]);
     $stock = htmlspecialchars($data["stock"]);
     $price = htmlspecialchars($data["price"]);
+    $type = htmlspecialchars($data["type"]);
+    $source = htmlspecialchars($data["source"]);
+    $dimensions = htmlspecialchars($data["dimensions"]);
+    $material = htmlspecialchars($data["material"]);
+
     $oldImage = $data["oldImage"];
+    $oldImage1 = $data["oldImage1"];
+    $oldImage2 = $data["oldImage2"];
+    $oldImage3 = $data["oldImage3"];
+    $oldImage4 = $data["oldImage4"];
 
     // cek apakah user pilih gambar baru atau tidak
     if ($_FILES['image']['error'] === 4) {
         $image = $oldImage;
     } else {
-        $image = uploud();
+        $image = uploud('image', 'item');
     }
 
-    $query = "UPDATE item SET image='$image', name = '$name', stock = '$stock', price = '$price' WHERE id = $id";
+    if ($_FILES['image1']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image1', 'sub');
+    }
+
+    if ($_FILES['image2']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image2', 'sub');
+    }
+
+    if ($_FILES['image3']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image3', 'sub');
+    }
+
+    if ($_FILES['image4']['error'] === 4) {
+        $image1 = $oldImage1;
+    } else {
+        $image1 = uploud('image4', 'sub');
+    }
+
+    $query = "UPDATE item SET image='$image', image1 = '$image1', name = '$name', code = '$code', stock = '$stock', price = '$price', type = '$type', source = '$source', dimensions = '$dimensions', material = '$material' WHERE id = $id";
 
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);

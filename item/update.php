@@ -12,7 +12,6 @@ if (isset($_POST["submit"])) {
         echo "
         <script>
             alert('Updated Success!');
-            document.location.href = '../index.php';
         </script>
         ";
     }
@@ -37,54 +36,138 @@ if (isset($_POST["submit"])) {
         </div>
         <div class="flex gap-6">
             <a href="">
-                <img src="./img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
+                <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
             </a>
-            <a href="item/create.php">
-                <img src="./img/icon/create.png" class="w-[66px] lg:w-[42px] change-color">
+            <a href="../item/create.php">
+                <img src="../img/icon/create.png" class="w-[66px] lg:w-[42px] change-color">
             </a>
-            <a href="admin/admin.php">
-                <img src="./img/icon/admin.png" class="w-[66px] lg:w-[42px] change-color">
+            <a href="../admin/admin.php">
+                <img src="../img/icon/admin.png" class="w-[66px] lg:w-[42px] change-color">
             </a>
-            <a href="admin/logout.php">
-                <img src="./img/icon/logout.png" class="w-[65px] lg:w-[41px] change-color">
+            <a href="../index.php">
+                <img src="../img/icon/logout.png" class="w-[65px] lg:w-[41px] change-color">
             </a>
         </div>
     </div>
 
-    <div class="pt-32">
-        <h1>Edit Daftar</h1>
+    <div class="pt-32 px-10">
+        <h1>*Jangan diedit jika tidak ingin diedit</h1>
         <form action="" method="post" enctype="multipart/form-data">
+
             <input type="hidden" name="id" value="<?= $item["id"]; ?>">
             <input type="hidden" name="oldImage" value="<?= $item["image"]; ?>">
-            <div class="border-2 w-fit">
-                <h1>name</h1>
-                <h1>lama</h1>
-                <input type="text" name="name" id="name" required value="<?= $item["name"]; ?>">
+            <input type="hidden" name="oldImage1" value="<?= $item["image1"]; ?>">
+            <input type="hidden" name="oldImage2" value="<?= $item["image2"]; ?>">
+            <input type="hidden" name="oldImage3" value="<?= $item["image3"]; ?>">
+            <input type="hidden" name="oldImage4" value="<?= $item["image4"]; ?>">
+
+            <div class="flex flex-wrap gap-3">
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">NAME</h1>
+                    <h1 class="bg-purple-500 text-white">OLD VALUE</h1>
+                    <h1>NEW VALUE (INPUT HERE)</h1>
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Name</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["name"]; ?></h1>
+                    <input type="text" name="name" id="name" required value="<?= $item["name"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Code</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["code"]; ?></h1>
+                    <input type="text" name="code" id="code" required value="<?= $item["code"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Stock</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["stock"]; ?></h1>
+                    <input type="text" name="stock" id="stock" required value="<?= $item["stock"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Price</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["price"]; ?></h1>
+                    <input type="text" name="price" id="price" required value="<?= $item["price"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Type</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["type"]; ?></h1>
+                    <input type="text" name="type" id="type" required value="<?= $item["type"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Source</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["source"]; ?></h1>
+                    <input type="text" name="source" id="source" required value="<?= $item["source"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Dimensions</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["dimensions"]; ?></h1>
+                    <input type="text" name="dimensions" id="dimensions" required value="<?= $item["dimensions"]; ?>" class="w-[80%]">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Material</h1>
+                    <h1 class="bg-purple-500 text-white"><?= $item["material"]; ?></h1>
+                    <input type="text" name="material" id="material" required value="<?= $item["material"]; ?>" class="w-[80%]">
+                </div>
+
             </div>
-            <ul>
-                <li>
-                    <label for="name">Ubah name</label><br>
-                    <input type="text" name="name" id="name" required value="<?= $item["name"]; ?>">
-                </li>
-                <li>
-                    <label for="stock">Ubah stock</label><br>
-                    <input type="text" name="stock" id="stock" required value="<?= $item["stock"]; ?>">
-                </li>
-                <li>
-                    <label for="price">Ubah price</label><br>
-                    <input type="text" name="price" id="price" required value="<?= $item["price"]; ?>">
-                </li>
-                <li>
-                    <label for="image">Ubah gambar</label><br>
-                    <img src="../img/item/<?= $item['image'] ?>" alt="image">
+
+            <h1 class="pt-10 pb-3">*image, sub image diisi jika ada foto tambahan</h1>
+
+            <div class="flex flex-wrap gap-3">
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Image</h1>
+                    <div class="bg-purple-500">
+                        <img src="../img/item/<?= $item['image'] ?>" alt="image" class="h-32 ">
+                    </div>
                     <input type="file" name="image" id="image">
-                </li>
-            </ul>
-            <p>*Jangan diedit jika tidak ingin diedit</p>
-            <button type="submit" name="submit">Submit</button>
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Sub-image1</h1>
+                    <div class="bg-purple-500">
+                        <img src="../img/sub/<?= $item['image1'] ?>" alt="image1" class="h-32 ">
+                    </div>
+                    <input type="file" name="image1" id="image1">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Sub-image2</h1>
+                    <div class="bg-purple-500">
+                        <img src="../img/sub/<?= $item['image2'] ?>" alt="image2" class="h-32 ">
+                    </div>
+                    <input type="file" name="image2" id="image2">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Sub-image3</h1>
+                    <div class="bg-purple-500">
+                        <img src="../img/sub/<?= $item['image3'] ?>" alt="image3" class="h-32 ">
+                    </div>
+                    <input type="file" name="image3" id="image3">
+                </div>
+
+                <div class="border-2 border-black text-center w-[200px]">
+                    <h1 class="bg-[#E7230D] text-white">Sub-image4</h1>
+                    <div class="bg-purple-500">
+                        <img src="../img/sub/<?= $item['image4'] ?>" alt="image4" class="h-32 ">
+                    </div>
+                    <input type="file" name="image4" id="image4">
+                </div>
+
+            </div>
+
+            <button type="submit" name="submit" class="button-red mt-5">Submit</button>
         </form>
     </div>
-    <a href="../index.php">back</a>
 </body>
 
 </html>

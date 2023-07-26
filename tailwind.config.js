@@ -2,7 +2,8 @@
 module.exports = {
   content: ["./index.php",
             "./admin/login.php",
-            "./item/update.php"],
+            "./item/update.php",
+            "./item/create.php"],
   theme: {
     extend: {
       colors: {
