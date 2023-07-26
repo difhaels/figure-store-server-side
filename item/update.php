@@ -119,7 +119,8 @@ if (isset($_POST["submit"])) {
 
             </div>
 
-            <h1 class="pt-10 pb-3">*image, sub image diisi jika ada foto tambahan</h1>
+            <h1 class="pt-10 pb-1">*image, sub image diisi jika ada foto tambahan</h1>
+            <h1 class="pb-3">*Refresh setelah update image, untuk melihat hasil</h1>
 
             <div class="flex flex-wrap gap-3">
 

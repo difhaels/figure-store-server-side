@@ -136,24 +136,24 @@ function update($data)
     }
 
     if ($_FILES['image2']['error'] === 4) {
-        $image1 = $oldImage2;
+        $image2 = $oldImage2;
     } else {
-        $image1 = uploud('image2', 'sub');
+        $image2 = uploud('image2', 'sub');
     }
 
     if ($_FILES['image3']['error'] === 4) {
-        $image1 = $oldImage3;
+        $image3 = $oldImage3;
     } else {
-        $image1 = uploud('image3', 'sub');
+        $image3 = uploud('image3', 'sub');
     }
 
     if ($_FILES['image4']['error'] === 4) {
-        $image1 = $oldImage4;
+        $image4 = $oldImage4;
     } else {
-        $image1 = uploud('image4', 'sub');
+        $image4 = uploud('image4', 'sub');
     }
 
-    $query = "UPDATE item SET image='$image', image1 = '$image1', name = '$name', code = '$code', stock = '$stock', price = '$price', type = '$type', source = '$source', dimensions = '$dimensions', material = '$material' WHERE id = $id";
+    $query = "UPDATE item SET image='$image', image1 = '$image1', image2 = '$image2', image3 = '$image3', image4 = '$image4', name = '$name', code = '$code', stock = '$stock', price = '$price', type = '$type', source = '$source', dimensions = '$dimensions', material = '$material' WHERE id = $id";
 
     mysqli_query($koneksi, $query);
     return mysqli_affected_rows($koneksi);
