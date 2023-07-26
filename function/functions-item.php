@@ -13,8 +13,6 @@ function create($data)
     $dimensions = htmlspecialchars($data["dimensions"]);
     $material = htmlspecialchars($data["material"]);
 
-
-
     // uploud image
     $image = uploud('image', 'item');
     // jika image tidak ada maka akan failed, karena image pertama adalah required
@@ -138,19 +136,19 @@ function update($data)
     }
 
     if ($_FILES['image2']['error'] === 4) {
-        $image1 = $oldImage1;
+        $image1 = $oldImage2;
     } else {
         $image1 = uploud('image2', 'sub');
     }
 
     if ($_FILES['image3']['error'] === 4) {
-        $image1 = $oldImage1;
+        $image1 = $oldImage3;
     } else {
         $image1 = uploud('image3', 'sub');
     }
 
     if ($_FILES['image4']['error'] === 4) {
-        $image1 = $oldImage1;
+        $image1 = $oldImage4;
     } else {
         $image1 = uploud('image4', 'sub');
     }
