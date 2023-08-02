@@ -27,13 +27,10 @@ if (isset($_POST["submit"])) {
 </head>
 
 <body>
-    <div class="bg-bg2 py-5 text-white flex items-center fixed w-full justify-between px-10">
-        <div class="flex items-end">
-            <a href="../index.php">
-                <h1 class="font-extrabold text-4xl">FIGURE STORE</h1>
-            </a>
-            <h1>.server side</h1>
-        </div>
+    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10">
+        <a href="../index.php">
+            <img src="../img/icon/back.png" alt="back" class="w-[25px] lg:w-[35px] change-color">
+        </a>
         <div class="flex gap-6">
             <a href="">
                 <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
@@ -48,7 +45,7 @@ if (isset($_POST["submit"])) {
                 <img src="../img/icon/logout.png" class="w-[65px] lg:w-[41px] change-color">
             </a>
         </div>
-    </div>
+    </nav>
 
     <div class="pt-32 px-10">
         <h1>*Jangan diedit jika tidak ingin diedit</h1>
