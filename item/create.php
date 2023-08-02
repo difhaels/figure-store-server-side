@@ -37,14 +37,11 @@ if (isset($_POST["submit"])) {
 
 <body>
     <div class="bg-bg2 py-5 text-white flex items-center fixed w-full justify-between px-10">
-        <div class="flex items-end">
-            <a href="../index.php">
-                <h1 class="font-extrabold text-4xl">FIGURE STORE</h1>
-            </a>
-            <h1>.server side</h1>
-        </div>
+        <a href="../index.php">
+            <img src="../img/icon/back.png" alt="back" class="w-[25px] lg:w-[35px] change-color">
+        </a>
         <div class="flex gap-6">
-            <a href="">
+            <a href="../admin/transaction.php">
                 <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
             </a>
             <a href="../item/create.php">

@@ -20,7 +20,7 @@ $item = read("SELECT * FROM item WHERE id = '$id'")[0];
             <img src="../img/icon/back.png" alt="back" class="w-[25px] lg:w-[35px] change-color">
         </a>
         <div class="flex gap-6">
-            <a href="">
+            <a href="../admin/transaction.php">
                 <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
             </a>
             <a href="../item/create.php">

@@ -29,7 +29,7 @@ $items = read("SELECT * FROM item");
             <h1>.server side</h1>
         </div>
         <div class="flex gap-6">
-            <a href="">
+            <a href="admin/transaction.php">
                 <img src="./img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
             </a>
             <a href="item/create.php">
