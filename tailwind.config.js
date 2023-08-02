@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./index.php",
             "./admin/login.php",
+            "./item/detail.php",
             "./item/update.php",
             "./item/create.php"],
   theme: {
