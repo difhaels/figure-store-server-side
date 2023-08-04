@@ -54,7 +54,7 @@ $transactions = read("SELECT * FROM transaction");
 
                 <div class="flex justify-between">
                     <a href="transfer.php?ti=<?= $transaction['transaction_info'] ?>&tn=<?= $transaction['transaction_name'] ?>" class="button-yellow">Bukti transfer</a>
-                    <a href="" class="button-green">Confirm</a>
+                    <a href="confirm.php?id=<?= $transaction['id'] ?>" class="button-green">Confirm</a>
                 </div>
 
                 <div class="bg-slate-200 h-[1px] w-[100%] mx-auto my-3"></div>
