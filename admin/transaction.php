@@ -53,7 +53,7 @@ $transactions = read("SELECT * FROM transaction");
                 <div class="bg-slate-200 h-[1px] w-[100%] mx-auto my-3"></div>
 
                 <div class="flex justify-between">
-                    <a href="" class="button-yellow">Bukti transfer</a>
+                    <a href="transfer.php?ti=<?= $transaction['transaction_info'] ?>&tn=<?= $transaction['transaction_name'] ?>" class="button-yellow">Bukti transfer</a>
                     <a href="" class="button-green">Confirm</a>
                 </div>
 
