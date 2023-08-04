@@ -538,9 +538,31 @@ video {
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .mb-3 {
@@ -549,6 +571,10 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-5 {
@@ -571,12 +597,20 @@ video {
   height: 2.5rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-32 {
   height: 8rem;
 }
 
 .h-36 {
   height: 9rem;
+}
+
+.h-\[1px\] {
+  height: 1px;
 }
 
 .h-fit {
@@ -586,6 +620,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-\[100\%\] {
+  width: 100%;
 }
 
 .w-\[200px\] {
@@ -702,6 +740,11 @@ video {
   background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -739,9 +782,19 @@ video {
   padding-right: 1.25rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-5 {
@@ -755,6 +808,10 @@ video {
 
 .pb-3 {
   padding-bottom: 0.75rem;
+}
+
+.pl-3 {
+  padding-left: 0.75rem;
 }
 
 .pt-10 {
@@ -899,6 +956,18 @@ body.main {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.button-green {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 208 65 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 /* halaman utama end */
 
 .login {
@@ -909,6 +978,10 @@ body.main {
 @media (min-width: 1024px) {
   .lg\:h-56 {
     height: 14rem;
+  }
+
+  .lg\:w-\[35\%\] {
+    width: 35%;
   }
 
   .lg\:w-\[35px\] {
