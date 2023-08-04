@@ -1,6 +1,6 @@
 <?php
 require '../function/functions-item.php';
-$id = $_GET["id"];
+$id = $_GET["item_id"];
 
 if (delete($id) > 0) {
     echo "

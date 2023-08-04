@@ -49,16 +49,16 @@ $items = read("SELECT * FROM item");
 
             <?php foreach ($items as $item) : ?>
                 <div class="item">
-                    <h1 class="item-nama"><?= $item["name"] ?></h1>
-                    <img src="./img/item/<?= $item["image"] ?>" alt="<?= $item["name"] ?>" class="item-gambar">
+                    <h1 class="item-nama"><?= $item["item_name"] ?></h1>
+                    <img src="./img/item/<?= $item["item_image"] ?>" alt="<?= $item["item_name"] ?>" class="item-gambar">
                     <div class="item-keterangan-1">
-                        <h1 class="item-keterangan-1-1">Rp. <?= $item["price"] ?></h1>
-                        <h1 class="item-keterangan-1-1">Stock : <?= $item["stock"] ?></h1>
+                        <h1 class="item-keterangan-1-1">Rp. <?= $item["item_price"] ?></h1>
+                        <h1 class="item-keterangan-1-1">Stock : <?= $item["item_stock"] ?></h1>
                     </div>
                     <div class="px-5 flex justify-center items-center gap-1 mb-3">
-                        <a href="item/detail.php?id=<?= $item['id'] ?>" class="button-red">Detail</a>
-                        <a href="item/update.php?id=<?= $item['id'] ?>" class="button-yellow">Edit</a>
-                        <a href="item/delete.php?id=<?= $item['id'] ?>" onclick="return confirm('Tekan ok untuk hapus')" class="delete">
+                        <a href="item/detail.php?item_id=<?= $item['item_id'] ?>" class="button-red">Detail</a>
+                        <a href="item/update.php?item_id=<?= $item['item_id'] ?>" class="button-yellow">Edit</a>
+                        <a href="item/delete.php?item_id=<?= $item['item_id'] ?>" onclick="return confirm('Tekan ok untuk hapus')" class="delete">
                             <img src="./img/icon/delete.png" alt="delete" width="25">
                         </a>
                     </div>

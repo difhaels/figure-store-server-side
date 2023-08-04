@@ -2,9 +2,9 @@
 require("../function/functions-item.php");
 
 // ambil data id dari url get
-$id = $_GET["id"];
+$id = $_GET["item_id"];
 
-$item = read("SELECT * FROM item WHERE id = $id")[0];
+$item = read("SELECT * FROM item WHERE item_id = $id")[0];
 
 if (isset($_POST["submit"])) {
     // cek keberhasilan
@@ -51,12 +51,12 @@ if (isset($_POST["submit"])) {
         <h1>*Jangan diedit jika tidak ingin diedit</h1>
         <form action="" method="post" enctype="multipart/form-data">
 
-            <input type="hidden" name="id" value="<?= $item["id"]; ?>">
-            <input type="hidden" name="oldImage" value="<?= $item["image"]; ?>">
-            <input type="hidden" name="oldImage1" value="<?= $item["image1"]; ?>">
-            <input type="hidden" name="oldImage2" value="<?= $item["image2"]; ?>">
-            <input type="hidden" name="oldImage3" value="<?= $item["image3"]; ?>">
-            <input type="hidden" name="oldImage4" value="<?= $item["image4"]; ?>">
+            <input type="hidden" name="id" value="<?= $item["item_id"]; ?>">
+            <input type="hidden" name="oldImage" value="<?= $item["item_image"]; ?>">
+            <input type="hidden" name="oldImage1" value="<?= $item["item_image1"]; ?>">
+            <input type="hidden" name="oldImage2" value="<?= $item["item_image2"]; ?>">
+            <input type="hidden" name="oldImage3" value="<?= $item["item_image3"]; ?>">
+            <input type="hidden" name="oldImage4" value="<?= $item["item_image4"]; ?>">
 
             <div class="flex flex-wrap gap-3">
 
@@ -68,50 +68,50 @@ if (isset($_POST["submit"])) {
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Name</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["name"]; ?></h1>
-                    <input type="text" name="name" id="name" required value="<?= $item["name"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_name"]; ?></h1>
+                    <input type="text" name="name" id="name" required value="<?= $item["item_name"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Code</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["code"]; ?></h1>
-                    <input type="text" name="code" id="code" required value="<?= $item["code"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_code"]; ?></h1>
+                    <input type="text" name="code" id="code" required value="<?= $item["item_code"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Stock</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["stock"]; ?></h1>
-                    <input type="text" name="stock" id="stock" required value="<?= $item["stock"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_stock"]; ?></h1>
+                    <input type="text" name="stock" id="stock" required value="<?= $item["item_stock"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Price</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["price"]; ?></h1>
-                    <input type="text" name="price" id="price" required value="<?= $item["price"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_price"]; ?></h1>
+                    <input type="text" name="price" id="price" required value="<?= $item["item_price"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Type</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["type"]; ?></h1>
-                    <input type="text" name="type" id="type" required value="<?= $item["type"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_type"]; ?></h1>
+                    <input type="text" name="type" id="type" required value="<?= $item["item_type"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Source</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["source"]; ?></h1>
-                    <input type="text" name="source" id="source" required value="<?= $item["source"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_source"]; ?></h1>
+                    <input type="text" name="source" id="source" required value="<?= $item["item_source"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Dimensions</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["dimensions"]; ?></h1>
-                    <input type="text" name="dimensions" id="dimensions" required value="<?= $item["dimensions"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_dimensions"]; ?></h1>
+                    <input type="text" name="dimensions" id="dimensions" required value="<?= $item["item_dimensions"]; ?>" class="w-[80%]">
                 </div>
 
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Material</h1>
-                    <h1 class="bg-purple-500 text-white"><?= $item["material"]; ?></h1>
-                    <input type="text" name="material" id="material" required value="<?= $item["material"]; ?>" class="w-[80%]">
+                    <h1 class="bg-purple-500 text-white"><?= $item["item_material"]; ?></h1>
+                    <input type="text" name="material" id="material" required value="<?= $item["item_material"]; ?>" class="w-[80%]">
                 </div>
 
             </div>
@@ -124,7 +124,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Image</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/item/<?= $item['image'] ?>" alt="image" class="h-32 ">
+                        <img src="../img/item/<?= $item['item_image'] ?>" alt="image" class="h-32 ">
                     </div>
                     <input type="file" name="image" id="image">
                 </div>
@@ -132,7 +132,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image1</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/sub/<?= $item['image1'] ?>" alt="image1" class="h-32 ">
+                        <img src="../img/sub/<?= $item['item_image1'] ?>" alt="image1" class="h-32 ">
                     </div>
                     <input type="file" name="image1" id="image1">
                 </div>
@@ -140,7 +140,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image2</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/sub/<?= $item['image2'] ?>" alt="image2" class="h-32 ">
+                        <img src="../img/sub/<?= $item['item_image2'] ?>" alt="image2" class="h-32 ">
                     </div>
                     <input type="file" name="image2" id="image2">
                 </div>
@@ -148,7 +148,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image3</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/sub/<?= $item['image3'] ?>" alt="image3" class="h-32 ">
+                        <img src="../img/sub/<?= $item['item_image3'] ?>" alt="image3" class="h-32 ">
                     </div>
                     <input type="file" name="image3" id="image3">
                 </div>
@@ -156,7 +156,7 @@ if (isset($_POST["submit"])) {
                 <div class="border-2 border-black text-center w-[200px]">
                     <h1 class="bg-[#E7230D] text-white">Sub-image4</h1>
                     <div class="bg-purple-500">
-                        <img src="../img/sub/<?= $item['image4'] ?>" alt="image4" class="h-32 ">
+                        <img src="../img/sub/<?= $item['item_image4'] ?>" alt="image4" class="h-32 ">
                     </div>
                     <input type="file" name="image4" id="image4">
                 </div>

@@ -1,7 +1,7 @@
 <?php
 require '../function/functions.php';
-$id = $_GET["id"];
-$item = read("SELECT * FROM item WHERE id = '$id'")[0];
+$id = $_GET["item_id"];
+$item = read("SELECT * FROM item WHERE item_id = '$id'")[0];
 ?>
 
 <!DOCTYPE html>
@@ -38,31 +38,31 @@ $item = read("SELECT * FROM item WHERE id = '$id'")[0];
     <div class="flex flex-wrap justify-center px-5 pt-32">
 
         <div class="px-10">
-            <img src="../img/item/<?= $item['image'] ?>" alt="<?= $item['code'] ?>" class="h-36 lg:h-56 mx-auto">
+            <img src="../img/item/<?= $item['item_image'] ?>" alt="<?= $item['item_code'] ?>" class="h-36 lg:h-56 mx-auto">
             <div class="flex justify-center gap-2 mt-2">
-                <img src="../img/sub/<?= $item['image1'] ?>" alt="<?= $item['code'] ?>1" class="h-36 lg:h-56">
-                <img src="../img/sub/<?= $item['image2'] ?>" alt="<?= $item['code'] ?>2" class="h-36 lg:h-56">
+                <img src="../img/sub/<?= $item['item_image1'] ?>" alt="<?= $item['item_code'] ?>1" class="h-36 lg:h-56">
+                <img src="../img/sub/<?= $item['item_image2'] ?>" alt="<?= $item['item_code'] ?>2" class="h-36 lg:h-56">
             </div>
             <div class="flex justify-center gap-2 mt-2">
-                <img src="../img/sub/<?= $item['image3'] ?>" alt="<?= $item['code'] ?>3" class="h-36 lg:h-56">
-                <img src="../img/sub/<?= $item['image4'] ?>" alt="<?= $item['code'] ?>4" class="h-36 lg:h-56">
+                <img src="../img/sub/<?= $item['item_image3'] ?>" alt="<?= $item['item_code'] ?>3" class="h-36 lg:h-56">
+                <img src="../img/sub/<?= $item['item_image4'] ?>" alt="<?= $item['item_code'] ?>4" class="h-36 lg:h-56">
             </div>
         </div>
 
         <div class="px-10 pt-[50px]">
-            <h1 class="text-xl"><?= $item['source'] ?> - <?= $item['name'] ?> - <?= $item['type'] ?> #<?= $item['code'] ?></h1>
+            <h1 class="text-xl"><?= $item['item_source'] ?> - <?= $item['item_name'] ?> - <?= $item['item_type'] ?> #<?= $item['item_code'] ?></h1>
             <div class="pt-7 flex gap-10">
                 <div>
                     <h1 class="text-slate-400">Type</h1>
-                    <h1><?= $item['type'] ?></h1>
+                    <h1><?= $item['item_type'] ?></h1>
                 </div>
                 <div>
                     <h1 class="text-slate-400">Dimensions</h1>
-                    <h1><?= $item['dimensions'] ?></h1>
+                    <h1><?= $item['item_dimensions'] ?></h1>
                 </div>
                 <div>
                     <h1 class="text-slate-400">Material</h1>
-                    <h1><?= $item['material'] ?></h1>
+                    <h1><?= $item['item_material'] ?></h1>
                 </div>
             </div>
         </div>
