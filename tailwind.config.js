@@ -3,6 +3,7 @@ module.exports = {
   content: ["./index.php",
             "./admin/login.php",
             "./admin/transaction.php",
+            "./admin/transfer.php",
             "./item/detail.php",
             "./item/update.php",
             "./item/create.php"],
