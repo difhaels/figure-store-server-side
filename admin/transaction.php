@@ -21,7 +21,7 @@ $transactions = read("SELECT * FROM transaction");
 </head>
 
 <body class="bg-slate-200 ">
-    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10">
+    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10 z-50">
         <a href="../index.php">
             <img src="../img/icon/back.png" alt="back" class="w-[25px] lg:w-[35px] change-color">
         </a>
@@ -48,6 +48,15 @@ $transactions = read("SELECT * FROM transaction");
                     <img src="../img/item/<?= $transaction['item_image'] ?>" alt="<?= $transaction['item_name'] ?>" class="h-16">
                     <h1 class="pl-3"><?= $transaction['item_name'] ?></h1>
                     <h1 class="font-bold absolute right-3">Rp<?= number_format($transaction['item_price'], 0, ',', '.'); ?></h1>
+                </div>
+
+                <div class="bg-slate-200 h-[1px] w-[100%] mx-auto my-3"></div>
+
+                <div>
+                    <h1><strong>Ordered by :</strong> <?= $transaction["transaction_name"] ?></h1>
+                    <h1><strong>Contact :</strong> <?= $transaction["transaction_notlp"] ?></h1>
+                    <strong>Address : </strong>
+                    <h1><?= $transaction["transaction_alamat"] ?></h1>
                 </div>
 
                 <div class="bg-slate-200 h-[1px] w-[100%] mx-auto my-3"></div>
