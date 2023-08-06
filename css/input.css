@@ -28,7 +28,7 @@
   
 /* Navbar Start */
 nav {
-    @apply bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10;
+    @apply bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10 z-50;
 }
 .nav-tittle {
     @apply font-extrabold text-lg lg:text-4xl;
