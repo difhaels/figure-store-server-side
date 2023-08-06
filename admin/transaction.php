@@ -68,7 +68,13 @@ $transactions = read("SELECT * FROM transaction");
 
                 <div class="bg-slate-200 h-[1px] w-[100%] mx-auto my-3"></div>
 
-                <h1>Status : <?= $transaction['status'] ?></h1>
+
+                <?php
+                $textColor = "";
+                $transaction["status"] === "sedang diproses!" ? $textColor = "text-green-500" :  $textColor =  "";
+                ?>
+                <h1 class="inline">Status : </h1>
+                <h1 class="<?= $textColor ?> inline"><?= $transaction['status'] ?></h1>
             </div>
         <?php endforeach; ?>
         <?php if (!$transactions) : ?>
