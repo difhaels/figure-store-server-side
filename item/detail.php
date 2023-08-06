@@ -15,22 +15,22 @@ $item = read("SELECT * FROM item WHERE item_id = '$id'")[0];
 </head>
 
 <body>
-    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10">
+    <nav>
         <a href="../index.php">
-            <img src="../img/icon/back.png" alt="back" class="w-[25px] lg:w-[35px] change-color">
+            <img src="../img/icon/back.png" alt="back" class="nav-a">
         </a>
         <div class="flex gap-6">
             <a href="../admin/transaction.php">
-                <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
+                <img src="../img/icon/pemesanan.png" class="nav-a">
             </a>
             <a href="../item/create.php">
-                <img src="../img/icon/create.png" class="w-[66px] lg:w-[42px] change-color">
+                <img src="../img/icon/create.png" class="nav-a">
             </a>
             <a href="../admin/admin.php">
-                <img src="../img/icon/admin.png" class="w-[66px] lg:w-[42px] change-color">
+                <img src="../img/icon/admin.png" class="nav-a">
             </a>
             <a href="../index.php">
-                <img src="../img/icon/logout.png" class="w-[65px] lg:w-[41px] change-color">
+                <img src="../img/icon/logout.png" class="nav-a">
             </a>
         </div>
     </nav>

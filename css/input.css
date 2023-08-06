@@ -3,16 +3,45 @@
 @tailwind utilities;
 
 
-body.main {
+/* Root Start */
+.body {
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: 50% 25%;
     background-attachment: fixed;
 }
-
-.change-color {
-    filter: invert(100%);
+  .button-yellow {
+    @apply bg-button2 text-white px-5 py-2 rounded-lg;
   }
+  .button-red {
+    @apply bg-[#E7230D] text-white px-5 py-2 rounded-lg;
+  }
+  .button-green {
+    @apply bg-green-500 text-white px-5 py-2 rounded-lg;
+  }
+  .button-blue {
+    @apply bg-sky-400 text-white px-5 py-1;
+  }
+  /* Root End */
+
+
+  
+/* Navbar Start */
+nav {
+    @apply bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10;
+}
+.nav-tittle {
+    @apply font-extrabold text-lg lg:text-4xl;
+}
+.nav-sub-tittle {
+    @apply text-[9px] lg:text-base pt-2 lg:pt-0;
+}
+.nav-a {
+    filter: invert(100%);
+    @apply w-[25px] lg:w-[35px];
+}
+/* Navbar End */
+
 
 /* halaman utama start */
 .item {
@@ -29,15 +58,6 @@ body.main {
 }
 .item-keterangan-1-1 {
     @apply text-sm text-teal-500;
-}
-.button-yellow {
-    @apply bg-button2 text-white px-5 py-2 rounded-xl
-}
-.button-red {
-    @apply bg-[#E7230D] text-white px-5 py-2 rounded-xl
-}
-.button-green {
-    @apply bg-[#52d041] text-white px-5 py-2 rounded-xl
 }
 
 /* halaman utama end */

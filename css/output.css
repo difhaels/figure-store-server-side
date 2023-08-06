@@ -892,16 +892,129 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-body.main {
+/* Root Start */
+
+.body {
   background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: 50% 25%;
   background-attachment: fixed;
 }
 
-.change-color {
-  filter: invert(100%);
+.button-yellow {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 175 25 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+.button-red {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 35 13 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-green {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.button-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* Root End */
+
+/* Navbar Start */
+
+nav {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 107 147 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  nav {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.nav-tittle {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 800;
+}
+
+@media (min-width: 1024px) {
+  .nav-tittle {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.nav-sub-tittle {
+  padding-top: 0.5rem;
+  font-size: 9px;
+}
+
+@media (min-width: 1024px) {
+  .nav-sub-tittle {
+    padding-top: 0px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.nav-a {
+  filter: invert(100%);
+  width: 25px;
+}
+
+@media (min-width: 1024px) {
+  .nav-a {
+    width: 35px;
+  }
+}
+
+/* Navbar End */
 
 /* halaman utama start */
 
@@ -955,42 +1068,6 @@ body.main {
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(20 184 166 / var(--tw-text-opacity));
-}
-
-.button-yellow {
-  border-radius: 0.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 175 25 / var(--tw-bg-opacity));
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.button-red {
-  border-radius: 0.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(231 35 13 / var(--tw-bg-opacity));
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.button-green {
-  border-radius: 0.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 208 65 / var(--tw-bg-opacity));
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* halaman utama end */
