@@ -23,22 +23,23 @@ if (!isset($image)) {
 </head>
 
 <body>
-    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10">
-        <a href="./transaction.php">
-            <img src="../img/icon/back.png" alt="back" class="w-[25px] lg:w-[35px] change-color">
-        </a>
+    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10 z-50">
+        <div class="flex items-end">
+            <h1 class="font-extrabold text-lg lg:text-4xl">FIGURE STORE</h1>
+            <h1 class="text-[9px] lg:text-base pt-2 lg:pt-0">.server side</h1>
+        </div>
         <div class="flex gap-6">
-            <a href="./transaction.php">
-                <img src="../img/icon/pemesanan.png" class="w-[70px] lg:w-[45px] change-color">
+            <a href="transaction.php">
+                <img src="../img/icon/pemesanan.png" class="w-[25px] lg:w-[35px] change-color">
             </a>
             <a href="../item/create.php">
-                <img src="../img/icon/create.png" class="w-[66px] lg:w-[42px] change-color">
+                <img src="../img/icon/create.png" class="w-[25px] lg:w-[35px] change-color">
             </a>
-            <a href="../admin/admin.php">
-                <img src="../img/icon/admin.png" class="w-[66px] lg:w-[42px] change-color">
+            <a href="admin.php">
+                <img src="../img/icon/admin.png" class="w-[25px] lg:w-[35px] change-color">
             </a>
-            <a href="./transaction.php">
-                <img src="../img/icon/logout.png" class="w-[65px] lg:w-[41px] change-color">
+            <a href="transaction.php">
+                <img src="../img/icon/logout.png" class="w-[25px] lg:w-[35px] change-color">
             </a>
         </div>
     </nav>

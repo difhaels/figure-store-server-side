@@ -25,7 +25,7 @@ $items = read("SELECT * FROM item");
 </head>
 
 <body class="main">
-    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10">
+    <nav class="bg-bg2 py-3 lg:py-5 text-white flex items-center fixed w-full justify-between px-3 lg:px-10 z-50">
         <div class="flex items-end">
             <h1 class="font-extrabold text-lg lg:text-4xl">FIGURE STORE</h1>
             <h1 class="text-[9px] lg:text-base pt-2 lg:pt-0">.server side</h1>
